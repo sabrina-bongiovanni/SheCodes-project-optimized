@@ -1,0 +1,173 @@
+body {
+  background-image: url(../src/images/sfondo-thunder.png);
+}
+
+.card {
+  margin: 140px 170px 0px 170px;
+  padding: 45px 20px;
+  background: rgba(255, 255, 255, 0.16);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(158, 158, 158, 0.1);
+  backdrop-filter: blur(9.3px);
+  -webkit-backdrop-filter: blur(7.3px);
+  border: 1px solid rgba(255, 255, 255, 0.35);
+}
+
+#inputGroup {
+  width: 70%;
+  margin: auto;
+}
+
+.form-control {
+  font-family: Raleway;
+}
+
+#searchButton {
+  font-family: Raleway;
+  background-color: white;
+  color: #939393;
+  transition: all 200ms ease-in-out;
+}
+
+#searchButton:hover {
+  background-color: #e4e4e4;
+  color: white;
+}
+
+#currentLocation {
+  font-family: Raleway;
+  font-size: 15px;
+  background-color: white;
+  color: #939393;
+  transition: all 200ms ease-in-out;
+  margin-left: 10px;
+}
+
+#currentLocation:hover {
+  background-color: #e4e4e4;
+  color: white;
+  font-style: italic;
+}
+
+h3 {
+  font-family: Poppins;
+  font-size: 55px;
+  font-weight: bold;
+  margin: 0;
+  color: #fff;
+  text-shadow: 2px 2px 4px rgb(0 0 0 / 80%);
+}
+
+#dateTime {
+  font-family: Poppins;
+  font-weight: 600;
+}
+
+#containerCity {
+  width: 70%;
+}
+
+
+
+
+#mainIcon {
+  width: 100px;
+  margin: auto;
+}
+
+#convert {
+  text-decoration: none;
+  color: #fff;
+  transition: all 100ms ease-in-out;
+}
+
+#mainTemperature {
+  font-family: Quicksand;
+  font-size: 62px;
+  font-weight: bold;
+  margin: auto;
+  color: #fff;
+  text-shadow: 2px 2px 4px rgb(0 0 0 / 80%);
+  /* transition: all 100ms ease-in-out; */
+  text-align: center;
+}
+
+#mainTemperature:hover,
+#mainTemperature:hover a {
+  color: #d3e9e7;
+  cursor: pointer;
+}
+
+#temperature-number {
+  margin-right: 0px;
+  padding-right: 0px;
+}
+
+#celsius-symbol, #farenheit-symbol {
+  font-size: 40px;
+  /* margin-left: 0px; */
+  /* padding-left: 0px; */
+}
+
+#minMaxTemperature {
+  margin: auto;
+  font-size: 15px;
+}
+
+#minMax {
+  font-family: Poppins;
+  font-weight: bolder;
+}
+
+#min-temp,
+#max-temp {
+  font-family: Quicksand;
+}
+
+#forecast {
+  justify-content: space-evenly;
+  width: 100%;
+  align-content: space-around;
+  color: #fff;
+  text-shadow: 1px 1px 1.5px rgb(0 0 0 / 90%);
+}
+
+#days {
+  text-align: center;
+  font-weight: bold;
+  margin: 20px 0px 12px 0px;
+}
+
+#forecast {
+  font-family: Poppins;
+  justify-content: space-evenly;
+  width: 100%;
+  align-content: space-around;
+}
+
+#icons {
+  margin: 0px;
+}
+
+.small-icon {
+  width: 55px;
+  display: block;
+  margin: auto;
+}
+
+#temperatures {
+  font-family: Quicksand;
+  text-align: center;
+  font-size: 20px;
+  margin: 12px 0px 20px 0px;
+}
+
+.footer {
+  margin: 0px auto 170px;
+  font-size: 10px;
+  text-align: center;
+}
+
+.hidden {
+  display: none;
+}
