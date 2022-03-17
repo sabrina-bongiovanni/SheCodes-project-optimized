@@ -36,19 +36,19 @@ let currentYear = now.getFullYear();
 let currentHour = now.getHours();
 let currentMinutes = now.getMinutes();
 
-function formatDate(current) {
+function formatDate() {
   date.innerHTML = `${currentDay} ${currentDate}/${currentMonth}/${currentYear}`;
 }
 
-function formatTime(current) {
+function formatTime() {
   if (currentMinutes < 10) {
     time.innerHTML = `${currentHour}:0${currentMinutes}`;
   } else {
     time.innerHTML = `${currentHour}:${currentMinutes}`;
   }
 }
-formatDate(now);
-formatTime(now);
+formatDate();
+formatTime();
 
 // show temperature
 
@@ -56,21 +56,45 @@ let currentLocationButton = document.querySelector("#currentLocation");
 currentLocationButton.addEventListener("click", showCurrentLocation);
       
 function showCurrentLocation() {
+  
+
     navigator.geolocation.getCurrentPosition(showPosition);
 
     function showPosition(position) {
     let latitude = position.coords.latitude;
     let longitude = position.coords.longitude;
 
+    //define api url
     let apiKey = "7573780ca10b4a84bc1fe1d021e3d865";
     let apiUrlPosition = `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&units=metric&appid=${apiKey}`;
-    axios.get(apiUrlPosition).then(showMainTemperature);
+    
+    // define async function
+    async function getapi(url) {
+
+      //Storing response
+      const response = await fetch(url)
+
+      //storing data in Json
+      var data = await response.json();
+      console.log(data);
+    }
+
+    getapi(apiUrlPosition);
+   
+
+    axios.get(apiUrlPosition).then(showMainTemperature(response));
 
     let apiKeyAbi = "7be32609312e4b2a8605bf935a91864b";
     let apiUrlAbi = `https://api.weatherbit.io/v2.0/forecast/daily?lat=${latitude}&lon=${longitude}&key=${apiKeyAbi}&days=6`;
 
     axios.get(apiUrlAbi).then(showSmallTemperature);
+    
+
+    
     }
+
+    getapi(apiUrlPosition);
+
 
 let searchForm = document.querySelector("#inputGroup");
 searchForm.addEventListener("submit", functionSearch);
@@ -95,11 +119,13 @@ function functionSearch(event) {
     let weatherApiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${inputCity}&appid=${apiKey}&units=metric`;
   
     axios.get(weatherApiUrl).then(showMainTemperature);
+    
   
     let apiKeyAbi = "7be32609312e4b2a8605bf935a91864b";
     let apiUrlAbi = `https://api.weatherbit.io/v2.0/forecast/daily?city=${inputCity}&key=${apiKeyAbi}&days=6`;
   
     axios.get(apiUrlAbi).then(showSmallTemperature);
+    
   }
   
   function showMainTemperature(response) {
