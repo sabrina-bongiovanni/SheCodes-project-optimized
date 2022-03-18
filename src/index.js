@@ -80,6 +80,8 @@ function showCurrentLocation() {
     }
 
     getapi(apiUrlPosition);
+    let dataINeed = getapi(apiUrlPosition);
+    console.log(dataINeed);
    
 
     axios.get(apiUrlPosition).then(showMainTemperature(response));
@@ -92,8 +94,6 @@ function showCurrentLocation() {
 
     
     }
-
-    getapi(apiUrlPosition);
 
 
 let searchForm = document.querySelector("#inputGroup");
