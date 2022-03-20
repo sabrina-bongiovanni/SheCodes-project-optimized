@@ -40,24 +40,24 @@
               </div>
           </div>
           </div>
-          <div class="row">
-            <div class="col-3" id="mainWeatherIcon">
+          <div class="row" id="main-row">
+            <div class="col-2" id="mainWeatherIcon">
               <img src="src/images/sun.png" id="mainIcon"/> 
             </div>
-            <div class="col-5" id="mainTemperature">
+            <div class="col-4" id="mainTemperature">
               <div class="row">
                 <div class="col-auto" id="temperature-number">
                   13
                 </div>
-                <div class="col-3" id="celsius-symbol">
-                  <a href="#" id="convert-to-celsius" class="active-link">°C</a> 
-                </div>
-                <div class="col-3" id="farenheit-symbol">
-                  <a href="#" id="convert-to-farenheit" class="inactive-link">°F</a>
+                <div class="col-auto" id="symbols">
+                  <span><a href="#" id="convert-to-celsius" class="active-link">°C</a></span>
+                  <span> 
+                    | <a href="#" id="convert-to-farenheit" class="inactive-link">°F</a>
+                  </span>
                 </div>
               </div>
             </div>
-            <div class="col-4" id="minMaxTemperature">
+            <div class="col-5" id="minMaxTemperature">
               <div class="row">
                 <div class="col-6" id="minMax">Min:</div>
                 <div class="col-6" id="min-temp">0°C</div>
@@ -65,9 +65,17 @@
               <div class="row">
                 <div class="col-6" id="minMax">Max:</div>
                 <div class="col-6" id="max-temp">20°C</div>
-            </div>
+              </div>
+              <div class="row" id="wind">
+                <div class="col-6" id="minMax">Windspeed:</div>
+                <div class="col-6" id="windspeed">0°C</div>
+              </div>
+              <div class="row" id="hum">
+                <div class="col-6" id="minMax">Max:</div>
+                <div class="col-6" id="humidity">20°C</div>
+              </div>
           </div>
-          <hr />
+          <hr class="hr"/>
         </div>
         <div class="container" id="forecast">
           <div class="row" id="days">
