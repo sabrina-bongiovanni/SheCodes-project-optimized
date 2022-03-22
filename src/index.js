@@ -160,27 +160,6 @@ function getData(event, parameter) {
       farenheitSymbol.classList.add("inactive-link");
     }
 
-    
-    if (response.data.weather[0].main === ["Drizzle", "Rain"].indexOf()) {
-    document.body.style.backgroundImage = "url('src/images/sfondo-rainy.png')";
-    document.querySelector("#mainIcon").src = "src/images/rain.png";
-    }
-    if (response.data.weather[0].main === "Thunderstorm") {
-      document.body.style.backgroundImage = "url('src/images/sfondo-thunder.png')";
-      document.querySelector("#mainIcon").src = "src/images/thunderstorm.png";
-    }
-    if (response.data.weather[0].main === "Snow") {
-      document.body.style.backgroundImage = "url('src/images/sfondo-snowy.png')";
-      document.querySelector("#mainIcon").src = "src/images/snow.png";
-    }
-    if (response.data.weather[0].main === "Clear") {
-      document.body.style.backgroundImage = "url('src/images/sfondo-sunny.png')";
-      document.querySelector("#mainIcon").src = "src/images/sun.png";
-    }
-    if (response.data.weather[0].main === "Clouds") {
-      document.body.style.backgroundImage = "url('src/images/sfondo-cloudy.png')";
-      document.querySelector("#mainIcon").src = "src/images/clouds.png";
-    }
     if (
       response.data.weather[0].description === "broken clouds" ||
       response.data.weather[0].description === "scattered clouds" ||
@@ -189,6 +168,10 @@ function getData(event, parameter) {
       document.body.style.backgroundImage =
         "url('src/images/sfondo-sun-cloudy.png')";
       document.querySelector("#mainIcon").src = "src/images/cloudy.png";
+    } else {
+      let weatherCondition = response.data.weather[0].main
+      document.body.style.backgroundImage = `url('src/images/sfondo-${weatherCondition}.png')`;
+      document.querySelector("#mainIcon").src = `src/images/${weatherCondition}.png`;  
     }
 
     //reset input value
@@ -214,7 +197,7 @@ function getData(event, parameter) {
       document.querySelector("#small-icon-" + i).src = "src/images/clouds.png";
     }
     if (weatherConditionLocale === 800) {
-      document.querySelector("#small-icon-" + i).src = "src/images/sun.png";
+      document.querySelector("#small-icon-" + i).src = "src/images/clear.png";
     }
     if (weatherConditionLocale >= 801 && weatherConditionLocale < 804) {
       document.querySelector("#small-icon-" + i).src = "src/images/cloudy.png";
