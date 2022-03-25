@@ -123,7 +123,7 @@ function getData(event, parameter) {
     maxTemp.innerHTML = `${Math.round(response.data.main.temp_max)}°C`;
 
     var windspeed = document.querySelector("#windspeed");
-    windspeed.innerHTML = `${Math.round(response.data.wind.speed)} km/h`;
+    windspeed.innerHTML = `${Math.round(response.data.wind.speed)} m/s`;
 
     var humidity = document.querySelector("#humidity");
     humidity.innerHTML = `${response.data.main.humidity}%`;
@@ -155,7 +155,7 @@ function getData(event, parameter) {
 
     function farenheitToCelsius(event) {
       event.preventDefault();
-      temperatureValue.innerHTML = Math.round(response.data.main.temp);
+      temperatureValue.innerHTML = Mafth.round(response.data.main.temp);
       minTemp.innerHTML = `${Math.round(response.data.main.temp_min)}°C`;
       maxTemp.innerHTML = `${Math.round(response.data.main.temp_max)}°C`;
       celsiusSymbol.classList.remove("inactive-link");
