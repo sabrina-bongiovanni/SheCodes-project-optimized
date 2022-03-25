@@ -101,10 +101,6 @@ function getData(event, parameter) {
   }
 
   function showTemperature(response) {
-    farenheitSymbol.classList.add("inactive-link");
-    farenheitSymbol.classList.remove("active-link");
-    celsiusSymbol.classList.add("active-link");
-    celsiusSymbol.classList.remove("inactive-link");
     let cityName = document.querySelector("h3");
     let inputCity = document.querySelector("#cityInput").value;
     if (inputCity !== "") {
@@ -134,8 +130,12 @@ function getData(event, parameter) {
 
     //Search function - convert
 
-    let celsiusSymbol = document.getElementById("convert-to-celsius");
-    let farenheitSymbol = document.getElementById("convert-to-farenheit");
+    var celsiusSymbol = document.getElementById("convert-to-celsius");
+    var farenheitSymbol = document.getElementById("convert-to-farenheit");
+    farenheitSymbol.classList.add("inactive-link");
+    farenheitSymbol.classList.remove("active-link");
+    celsiusSymbol.classList.add("active-link");
+    celsiusSymbol.classList.remove("inactive-link");
     farenheitSymbol.addEventListener("click", celsiusToFarenheit);
     celsiusSymbol.addEventListener("click", farenheitToCelsius);
     
