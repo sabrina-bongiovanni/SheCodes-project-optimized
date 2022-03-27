@@ -155,7 +155,7 @@ function getData(event, parameter) {
 
     function farenheitToCelsius(event) {
       event.preventDefault();
-      temperatureValue.innerHTML = Mafth.round(response.data.main.temp);
+      temperatureValue.innerHTML = Math.round(response.data.main.temp);
       minTemp.innerHTML = `${Math.round(response.data.main.temp_min)}°C`;
       maxTemp.innerHTML = `${Math.round(response.data.main.temp_max)}°C`;
       celsiusSymbol.classList.remove("inactive-link");
