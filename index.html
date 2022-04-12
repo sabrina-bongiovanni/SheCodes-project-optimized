@@ -20,7 +20,7 @@
     <div class="card">
       <div class="card-body">        
         <form class="row align-items-center" id="inputGroup">
-          <div class="input-group mb-3" >
+          <div class="input-group" >
             <input type="text" class="form-control" placeholder="Enter your city" aria-label="city" aria-describedby="button-addon2" id="cityInput">
             <button class="btn btn-outline-secondary" type="submit" id="searchButton">Search</button>
             <button class="btn btn-outline-secondary" type="button" id="currentLocation">📍 Current Location</button>
@@ -35,17 +35,17 @@
               <div class="row">
                 <div class="col-auto" id="date"></div>
               </div>
-              <div class="row">
+              <div class="row" id="time-row">
                 <div class="col-auto" id="time"></div>  
               </div>
           </div>
           </div>
           <div class="row" id="main-row">
-            <div class="col-2" id="mainWeatherIcon">
+            <div class="col-lg-2 col-md-2 col-sm-12" id="mainWeatherIcon">
               <img src="src/images/Clear.png" id="mainIcon"/> 
             </div>
-            <div class="col-4" id="mainTemperature">
-              <div class="row">
+            <div class="col-lg-4 col-md-4 col-sm-2" id="mainTemperature">
+              <div class="row temperature-wrapper">
                 <div class="col-auto" id="temperature-number">
                   13
                 </div>
@@ -57,42 +57,44 @@
                 </div>
               </div>
             </div>
-            <div class="col-5" id="minMaxTemperature">
+            <div class="col-lg-4 col-md-4 col-sm-12" id="minMaxTemperature">
               <div class="row">
-                <div class="col-6" id="minMax">Min:</div>
-                <div class="col-6" id="min-temp">0°C</div>
+                <div class="col-7" id="minMax">Min:</div>
+                <div class="col-5" id="min-temp">0°C</div>
               </div>
               <div class="row">
-                <div class="col-6" id="minMax">Max:</div>
-                <div class="col-6" id="max-temp">20°C</div>
+                <div class="col-7" id="minMax">Max:</div>
+                <div class="col-5" id="max-temp">20°C</div>
               </div>
               <div class="row" id="wind">
-                <div class="col-6" id="minMax">Windspeed:</div>
-                <div class="col-6" id="windspeed">0°C</div>
+                <div class="col-7" id="minMax">Windspeed:</div>
+                <div class="col-5" id="windspeed">0°C</div>
               </div>
               <div class="row" id="hum">
-                <div class="col-6" id="minMax">Humidity:</div>
-                <div class="col-6" id="humidity">20°C</div>
+                <div class="col-7" id="minMax">Humidity:</div>
+                <div class="col-5" id="humidity">20°C</div>
               </div>
           </div>
-          <hr class="hr"/>
         </div>
+
+        <hr class="hr"/>
+
         <div class="container" id="forecast">
           <div class="row" id="days">
-            <div class="col">
-              <p id="day-1">mon</p>
+            <div class="col days-col">
+              <p id="day-1">Mon</p>
             </div>
-            <div class="col">
-              <p id="day-2">tue</p>
+            <div class="col days-col">
+              <p id="day-2">Tue</p>
             </div>
-            <div class="col">
-              <p id="day-3">wed</p>
+            <div class="col days-col">
+              <p id="day-3">Wed</p>
             </div>
-            <div class="col">
-              <p id="day-4">thu</p>
+            <div class="col days-col">
+              <p id="day-4">Thu</p>
             </div>
-            <div class="col">
-              <p id="day-5">fri</p>
+            <div class="col days-col">
+              <p id="day-5">Fri</p>
             </div>
           </div>
           <div class="row" id="icons">
@@ -113,19 +115,19 @@
             </div>
           </div>
           <div class="row" id="temperatures">
-            <div class="col">
+            <div class="col temp-col">
               <p id="temperature-day-1">13°C</p>
             </div>
-            <div class="col">
+            <div class="col temp-col">
               <p id="temperature-day-2">13°C</p>
             </div>
-            <div class="col">
+            <div class="col temp-col">
               <p id="temperature-day-3">13°C</p>
             </div>
-            <div class="col">
+            <div class="col temp-col">
               <p id="temperature-day-4">13°C</p>
             </div>
-            <div class="col">
+            <div class="col temp-col">
               <p id="temperature-day-5">13°C</p>
             </div>
           </div>
@@ -133,7 +135,7 @@
       </div>
     </div>
   </div>
-  <p class="footer"><a href="https://github.com/sabrybabi/SheCodes-project-optimized" target="_blank">Open-source code</a> by Sabrina Bongiovanni</p>
+  <p class="footer"><a href="https://github.com/sabrybabi/SheCodes-project-responsive" target="_blank">Open-source code</a> by Sabrina Bongiovanni</p>
 
   
   <script src="src/index.js">
